@@ -10,7 +10,8 @@ from markdown_pdf import MarkdownPdf, Section
 
 load_dotenv()
 
-api_key = os.getenv("gemini_api_key")    
+#api_key = os.getenv("gemini_api_key")  
+api_key = st.secrets["gemini_api_key"]  
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
